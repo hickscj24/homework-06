@@ -1,0 +1,145 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background: darkgrey;
+}
+
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-style: bold;
+    background-color: black;
+    color: white;
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.card1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 30px;
+    background: darkgray;
+    
+}
+
+.weather {
+    background:black;
+    color: white;
+    border-radius: 20px;
+    width: 60%;
+    margin: 5px;
+    padding: 15px;
+    font-family: open sans;
+    height: 420px;
+    
+}
+
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+button {
+   
+    border-radius: 50%;
+    border: none;
+    height: 5em;
+    width: 5em;
+    margin: 10px;
+    color: black;
+    cursor: pointer;
+    transition: .03s ease-in-out;
+}
+
+input.search-bar {
+    border: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 36px;
+    font-family: open sans;
+    padding: 1em;
+    width: calc(50% - 150px);
+    font-size: 22px;
+}
+
+button:hover {
+    background: lightgrey;
+}
+
+
+
+.temp {
+    padding: 10px;
+    font-size: 32px;
+    font-style: bold;
+}
+
+.description {
+    padding: 10px;
+}
+
+.humidity {
+    padding:10px;
+}
+
+.wind {
+    padding: 10px;
+}
+
+.UVindex {
+    padding: 10px;
+}
+
+#sideMenu {
+    background: black;
+    width: 280px;
+    padding: 50px;
+    border-radius: 10px;
+    height: 100%;
+    float: left;
+    color: white;
+    
+}
+
+
+h3 {
+    text-align: center;
+    padding: 5px;
+    color: lightgray; 
+    text-transform: uppercase;
+    font-style: bold;
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 20px;
+    padding: 10px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+}
+
+.forecastWeather {
+    background:black;
+    color: white;
+    border-radius: 20px;
+    width: 60%;
+    margin: 5px;
+    padding: 15px;
+    font-family: open sans;
+
+    height: 420px;
+    
+}
