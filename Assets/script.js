@@ -22,7 +22,7 @@ function getCurrentWeather(searchVal) {
 
     //make api call to get the  current weather info
     fetch(
-        "http://api.openweathermap.org/data/2.5/weather?q=" + searchVal + "&appid=" + apiKey + "&units=imperial"
+        "https://api.openweathermap.org/data/2.5/weather?q=" + searchVal + "&appid=" + apiKey + "&units=imperial"
 
     )
         .then((response) => response.json())
@@ -30,7 +30,7 @@ function getCurrentWeather(searchVal) {
 
             console.log(data)
             fetch(
-                "http://api.openweathermap.org/data/2.5/onecall?" + "lat=" + data.coord.lat + "&lon=" + data.coord.lon + "&appid=" + apiKey + "&units=imperial"
+                "https://api.openweathermap.org/data/2.5/onecall?" + "lat=" + data.coord.lat + "&lon=" + data.coord.lon + "&appid=" + apiKey + "&units=imperial"
 
             )
                 .then((response) => response.json())
