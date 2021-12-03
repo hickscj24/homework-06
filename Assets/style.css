@@ -61,6 +61,7 @@ button {
     color: black;
     cursor: pointer;
     transition: .03s ease-in-out;
+    
 }
 
 input.search-bar {
@@ -72,6 +73,7 @@ input.search-bar {
     padding: 1em;
     width: calc(50% - 150px);
     font-size: 22px;
+    margin: 5px
 }
 
 button:hover {
@@ -116,19 +118,31 @@ button:hover {
 
 h3 {
     text-align: center;
-    padding: 5px;
+    padding: 10px;
     color: lightgray; 
     text-transform: uppercase;
     font-style: bold;
-    font-size: 24px;
+    font-size: 32px;
+    margin: 5px;
 }
 
-h4 {
-    font-size: 20px;
+#sideMenu h3 {
+    text-align: center;
     padding: 10px;
-    display: inline-block;
+    color: lightgray; 
+    text-transform: uppercase;
+    font-style: bold;
+    font-size: 32px;
+    margin: 5px;
+}
+
+h2 {
+    font-size: 32px;
+    padding: 10px;
+    display: flex;
     align-items: center;
     justify-content: center;
+    margin: 10px;
 }
 
 .forecastWeather {
@@ -142,4 +156,25 @@ h4 {
 
     height: 420px;
     
+}
+
+.columns {
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+#sideMenu button {
+    border-radius: 50%;
+    border: none;
+    height: 2em;
+    width: 2em;
+    margin: 10px;
+    color: black;
+    cursor: pointer;
+    transition: .03s ease-in-out;
+    float: right;
 }

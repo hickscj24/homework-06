@@ -1,5 +1,3 @@
-
-
 var searchBtn = document.querySelector('#searchBtn');
 var currentWeatherEl = document.querySelector('.weather');
 var apiKey = "97722a6914a725b8c8ab3b9ce2052626";
@@ -39,7 +37,7 @@ function getCurrentWeather(searchVal) {
                 .then((data) => {
 
                     currentWeatherEl.innerHTML = "";
-                    currentForecastEl.innerHTML = " <h4>5 Day Forecast:</h4>";
+                    currentForecastEl.innerHTML = "";
 
                     var cityName = document.createElement('h3');
                     cityName.textContent = searchVal;
@@ -129,7 +127,19 @@ function getCurrentWeather(searchVal) {
                     iconEl.src = url;
                     history.appendChild(iconEl);
 
+                    var prevSearchBtn = document.createElement('button');
+                    history.appendChild(prevSearchBtn);
 
+                    prevSearchBtn.addEventListener('click', prevHistory); 
+                        
+                    function prevHistory() {
+                        getCurrentWeather(searchVal)
+                    }
+                  console.log(sideMenu.children.length)
+                    if (sideMenu.children.length > 4) {
+                        sideMenu.removeChild(sideMenu.lastChild)
+                        console.log("were here")
+                    }
 
 
                 });
@@ -141,24 +151,4 @@ function getCurrentWeather(searchVal) {
 
 
 
-
-/*function getforecastWeather(forecastWth) {
-    fetch(
-        "http://api.openweathermap.org/data/2.5/forecast?q=" + "lat=" + data.coord.lat + "&lon=" + data.coord.lon + "&appid=" + apiKey + "&units=imperial"
-    )
-
-        .then((response) => response.json())
-        .then((data) => {
-
-            var cityName = document.createElement('h3');
-            cityName.textContent = forecastWth;
-            forecastWththWeatherEl.appendChild(cityName);
-
-            var forecastTemp = document.createElement('p');
-            forecastWthTemp.textContent = "Current Temperature: " + data.forecast.temp + " F";
-            forecastWththWeatherEl.appendChild(forecastTemp);
-
-
-        });
-};*/
 
